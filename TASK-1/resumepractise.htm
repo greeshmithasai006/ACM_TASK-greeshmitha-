@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Greeshmitha's Portfolio</title>
+    <style>
+       .skills-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+       }
+       .skills-list li {
+            margin: 10px;
+            padding: 5px;
+       }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            background-color: #dad4d4;
+            color: #333;
+            scroll-behavior: smooth; /* Added smooth scrolling */
+        }
+        nav {
+            font-size: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px 0;
+        }
+
+        nav a:hover {
+            color: #ff7f50;
+        }
+
+        .sidebar {
+            background-color: rgb(230, 73, 99);
+            width: 300px;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            padding-top: 5px;
+            padding-bottom: 50px;
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .content {
+            margin-left: 320px;
+            padding: 20px;
+            font-size: 22px;
+            margin-top: 70px;
+        }
+        @media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: static;
+        padding-top: 10px;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    .project-item {
+        width: 100%; /* Full width for smaller screens */
+    }
+}
+
+
+        h1, h2, p {
+            color: #333;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #ff7f50;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        table, th, td {
+            border-collapse: collapse;
+            width: 100%;
+            height: 50%;
+            border: 1px solid #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .project-item {
+            position: relative;
+            width: 300px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .project-item img {
+            width: 100%;
+            transition: transform 0.3s;
+        }
+
+        .project-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .project-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .project-item:hover .project-info {
+            opacity: 1;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a> <!-- Added Projects link -->
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+
+    <div id="home" class="content section">
+        <h1>HELLO, I'M GREESHMITHA</h1>
+    </div>
+
+    <div id="about" class="content section">
+        <h1>About Me</h1>
+        <p>Hello, I'm Greeshmitha, a passionate and aspiring individual on a journey in the world of technology. With a strong foundation in logical thinking, I approach challenges with a high spirit, always eager to delve deep into complex problems and find innovative solutions.</p>
+        <p>As a student and a budding web developer, I am dedicated to continuous learning and the exploration of new technologies. My journey is marked by a genuine enthusiasm for the ever-evolving field of web development.</p>
+    </div>
+
+    <div id="education" class="content section">
+        <h1>Education</h1>
+        <table>
+            <tr>
+                <th>EDUCATION</th>
+                <th><nobr>YEAR OF STUDY</nobr></th>
+                <th>AREA</th>
+            </tr>
+            <tr>
+                <td>Secondary Education</td>
+                <td><nobr>2016-2021</nobr></td>
+                <td>Vijayawada</td>
+            </tr>
+            <tr>
+                <td>Intermediate</td>
+                <td><nobr>2021-2022</nobr></td>
+                <td>Vijayawada</td>
+            </tr>
+            <tr>
+                <td>Engineering</td>
+                <td><nobr>2022-2026</nobr></td>
+                <td>Kerala</td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="skills" class="content section">
+        <h1>SKILLS</h1>
+        <ul>
+            <li>Java</li>
+            <li>Python</li>
+            <li>Copywriting</li>
+            <li>Web Design</li>
+            <li>Content Writing</li>
+            <li>HTML and CSS</li>
+        </ul>
+    </div>
+
+    <div id="projects" class="content section">
+        <h1>Projects</h1>
+        <div id="project-gallery" class="gallery"></div>
+    </div>
+
+    <div id="contact" class="content section">
+            <h1>Contact</h1>
+            <p><i class="fa fa-envelope"></i> <a href="mailto:greeshmithagutta4@gmail.com">greeshmithagutta4@gmail.com</a></p>
+            <p><i class="fa fa-instagram"></i> <a href="https://www.instagram.com/greeshmitha_sai" target="_blank">greeshmitha_sai</a></p>
+            <p><i class="fa fa-phone"></i> <a href="tel:+917382824945">+91 7382824945</a></p>
+        
+    </div>
+
+    <script>
+        const projects = [
+            {
+                title: "Project 1",
+                image: "images/project1.jpg",
+                description: "Description of Project 1.",
+                link: "https://code-projects.org/wp-content/uploads/2020/04/2-8.png"
+            },
+            {
+                title: "Project 2",
+                image: "images/project2.jpg",
+                description: "Description of Project 2.",
+                link: "https://th.bing.com/th/id/OIP.Kjr6DPiMtgbQAer-KSk4YwAAAA?rs=1&pid=ImgDetMain"
+            },
+        ];
+
+        const gallery = document.getElementById('project-gallery');
+
+        projects.forEach(project => {
+            const projectItem = document.createElement('div');
+            projectItem.classList.add('project-item');
+            projectItem.innerHTML = `
+                <img src="${project.image}" alt="${project.title}">
+                <div class="project-info">
+                    <h3>${project.title}</h3>
+                    <p>${project.description}</p>
+                </div>
+            `;
+            projectItem.onclick = () => {
+                window.open(project.link, '_blank');
+            };
+            gallery.appendChild(projectItem);
+        });
+    </script>
+</body>
+</html>
